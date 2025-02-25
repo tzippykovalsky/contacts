@@ -1,4 +1,5 @@
 import { createSlice } from '@reduxjs/toolkit'
+import { closePanel } from './panelSlice';
 
 const initialState = {
     contactsArr: [],
@@ -9,16 +10,37 @@ const contactSlice = createSlice({
     name: "contact",
     initialState,
     reducers: {
+        /**
+         * set the contact array
+         */
+        setContactsArr: (state, action) => {
+            state.contactsArr = action.payload;
+        }
+        ,
+        /**
+         * add contact to the contacts array
+         */
         addContact: (state, action) => {
             state.contactsArr.push({ ...action.payload })
         },
+        /**
+         * set the current contact to edit or display
+         */
         setCurrentContact: (state, action) => {
             state.currentContact = action.payload;
         },
-        // נכון לעשות שכאשר סוגרים את הפאנל אז מתרחשת פה פעולת  currentContact: null
+     
+    },
+    /**
+     * set current contact to null when the panel is closed
+     */
+    extraReducers: (builder) => {
+        builder.addCase(closePanel, (state, _action) => {
+            state.currentContact = null;
+        })
     }
 
 })
 
-export const { setAddMode, setDisplayMode, setEditMode, openPanel, closePanel } = contactSlice.actions;
+export const { setContactsArr, setCurrentContact, addContact } = contactSlice.actions;
 export default contactSlice.reducer;

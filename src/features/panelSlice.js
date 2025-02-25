@@ -1,4 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
+import { setCurrentContact } from "./contactSlice";
 
 /**
  * enum for the panel mode
@@ -22,39 +23,40 @@ const panelSlice = createSlice({
     initialState,
     reducers: {
         /**
-         * open the panel
-         */
-        openPanel: (state, _action) => {
-            state.open = true;
-        },
-        /**
          * close the panel
          */
         closePanel: (state, _action) => {
             state.open = false;
+            state.mode = null;
         },
         /**
-         * set the panel to edit mode
+         * open panel with edit mode
          */
         setEditMode: (state, _action) => {
             state.mode = enumMode.EDIT;
+            state.open = true;
+
         },
         /**
-         * set the panel to display mode
+         * open panel with display mode
          */
         setDisplayMode: (state, _action) => {
             state.mode = enumMode.DISPLAY;
+            state.open = true;
+
         },
         /**
-         * set the panel to add mode
+         * open panel with add mode
          */
         setAddMode: (state, _action) => {
             state.mode = enumMode.ADD;
+            state.open = true;
+
         },
-        // נכון לעשות שכאשר סוגרים את הפאנל אז מתרחשת פה פעולת  currentContact: null
-    }
+    },
+
 
 })
 
-export const { setAddMode, setDisplayMode, setEditMode, openPanel, closePanel } = panelSlice.actions
+export const { setAddMode, setDisplayMode, setEditMode, closePanel } = panelSlice.actions
 export default panelSlice.reducer;

@@ -1,0 +1,61 @@
+{
+    "contacts": [
+      {
+        "id": 1,
+        "isMain": true,
+        "isActive": true,
+        "firstName": "Michael",
+        "lastName": "Cohen",
+        "role": "Senior Engineer",
+        "contactType": "Freelancer",
+        "address": "Flat 3, HaShalom 45, Tel Aviv",
+        "tags": ["Maintenance", "Repairs"],
+        "contactDetails": {
+          "preferredLanguage": "English",
+          "phoneNumbers": [
+            {"number": "054-7896543", "type": "Work"},
+            {"number": "03-5678901", "type": "Home"}
+          ],
+          "emails": [
+            {"email": "michael.cohen@engineer.com", "type": "Work"},
+            {"email": "mikecohen@gmail.com", "type": "Private"}
+          ],
+          "country": "Israel"
+        },
+        "billingInformation": "Halapid 9",
+        "mailingAddress": "Halapid 9",
+        "accountingRef": "88888",
+        "vatNumber": "587974",
+        "src": "../images/1.jpg"
+      },
+      {
+        "id": 2,
+        "isMain": false,
+        "isActive": false,
+        "firstName": "Sarah",
+        "lastName": "Levi",
+        "role": "Project Manager",
+        "contactType": "Employee",
+        "address": "Floor 2, King George 10, Tel Aviv",
+        "tags": ["Security", "Renovation"],
+        "contactDetails": {
+          "preferredLanguage": "Hebrew",
+          "phoneNumbers": [
+            {"number": "052-1234567", "type": "Work"},
+            {"number": "03-2345678", "type": "Home"}
+          ],
+          "emails": [
+            {"email": "sarah.levi@company.com", "type": "Work"},
+            {"email": "sarah.levi@gmail.com", "type": "Private"}
+          ],
+          "country": "United States"
+        },
+        "mailingAddress": "King George 10, Tel Aviv",
+        "billingInformation": "King George 10, Tel Aviv",
+        "accountingRef": "77777",
+        "vatNumber": "123456",
+        "src": "../images/2.jpg"
+      }
+    ]
+  }
+  
