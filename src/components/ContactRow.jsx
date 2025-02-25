@@ -1,4 +1,4 @@
-import { IconButton, Rating, TableCell, TableRow, Box } from "@mui/material";
+import { IconButton, Rating, TableCell, TableRow, Box,Avatar } from "@mui/material";
 import RemoveRedEyeOutlinedIcon from '@mui/icons-material/RemoveRedEyeOutlined';
 import { useDispatch } from "react-redux";
 import { setDisplayMode } from "../features/panelSlice";
@@ -30,7 +30,13 @@ const ContactRow = ({ contact }) => {
       key={contact.name}
       sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
     >
-      <TableCell>Profile</TableCell>
+      <TableCell>
+      <Avatar
+        alt={contact.firstName + " " + contact.lastName}
+        src={contact.avatar}
+        sx={{ width: 24, height: 24 }}
+      />
+      </TableCell>
 
       <TableCell component="th" scope="contact">
         {contact.contactType}

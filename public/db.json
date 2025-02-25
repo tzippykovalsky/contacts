@@ -1,61 +1,164 @@
 {
-    "contacts": [
-      {
-        "id": 1,
-        "isMain": true,
-        "isActive": true,
-        "firstName": "Michael",
-        "lastName": "Cohen",
-        "role": "Senior Engineer",
-        "contactType": "Freelancer",
-        "address": "Flat 3, HaShalom 45, Tel Aviv",
-        "tags": ["Maintenance", "Repairs"],
-        "contactDetails": {
-          "preferredLanguage": "English",
-          "phoneNumbers": [
-            {"number": "054-7896543", "type": "Work"},
-            {"number": "03-5678901", "type": "Home"}
-          ],
-          "emails": [
-            {"email": "michael.cohen@engineer.com", "type": "Work"},
-            {"email": "mikecohen@gmail.com", "type": "Private"}
-          ],
-          "country": "Israel"
-        },
-        "billingInformation": "Halapid 9",
-        "mailingAddress": "Halapid 9",
-        "accountingRef": "88888",
-        "vatNumber": "587974",
-        "src": "../images/1.jpg"
+  "contacts": [
+    {
+      "id": 1,
+      "isMain": true,
+      "isActive": true,
+      "firstName": "Michael",
+      "lastName": "Cohen",
+      "role": "Senior Engineer",
+      "contactType": "Freelancer",
+      "address": "Flat 3, HaShalom 45, Tel Aviv",
+      "tags": ["Maintenance", "Repairs"],
+      "contactDetails": {
+        "preferredLanguage": "English",
+        "phoneNumbers": [
+          {"number": "054-7896543", "type": "Work"},
+          {"number": "03-5678901", "type": "Home"}
+        ],
+        "emails": [
+          {"email": "michael.cohen@engineer.com", "type": "Work"},
+          {"email": "mikecohen@gmail.com", "type": "Private"}
+        ],
+        "country": "Israel"
       },
-      {
-        "id": 2,
-        "isMain": false,
-        "isActive": false,
-        "firstName": "Sarah",
-        "lastName": "Levi",
-        "role": "Project Manager",
-        "contactType": "Employee",
-        "address": "Floor 2, King George 10, Tel Aviv",
-        "tags": ["Security", "Renovation"],
-        "contactDetails": {
-          "preferredLanguage": "Hebrew",
-          "phoneNumbers": [
-            {"number": "052-1234567", "type": "Work"},
-            {"number": "03-2345678", "type": "Home"}
-          ],
-          "emails": [
-            {"email": "sarah.levi@company.com", "type": "Work"},
-            {"email": "sarah.levi@gmail.com", "type": "Private"}
-          ],
-          "country": "United States"
-        },
-        "mailingAddress": "King George 10, Tel Aviv",
-        "billingInformation": "King George 10, Tel Aviv",
-        "accountingRef": "77777",
-        "vatNumber": "123456",
-        "src": "../images/2.jpg"
-      }
-    ]
-  }
-  
+      "billingInformation": "Halapid 9",
+      "mailingAddress": "Halapid 9",
+      "accountingRef": "88888",
+      "vatNumber": "587974",
+      "avatar": "https://meshek8.co.il/wp-content/uploads/2016/01/%D7%A6%D7%99%D7%9C%D7%95%D7%9D_%D7%AA%D7%9E%D7%95%D7%A0%D7%AA_%D7%A4%D7%A8%D7%95%D7%A4%D7%99%D7%9C_%D7%9E%D7%A2%D7%95%D7%9C%D7%94.jpg"
+    },
+    {
+      "id": 2,
+      "isMain": false,
+      "isActive": false,
+      "firstName": "Sarah",
+      "lastName": "Levi",
+      "role": "Project Manager",
+      "contactType": "Employee",
+      "address": "Floor 2, King George 10, Tel Aviv",
+      "tags": ["Security", "Renovation"],
+      "contactDetails": {
+        "preferredLanguage": "Hebrew",
+        "phoneNumbers": [
+          {"number": "052-1234567", "type": "Work"},
+          {"number": "03-2345678", "type": "Home"}
+        ],
+        "emails": [
+          {"email": "sarah.levi@company.com", "type": "Work"},
+          {"email": "sarah.levi@gmail.com", "type": "Private"}
+        ],
+        "country": "United States"
+      },
+      "mailingAddress": "King George 10, Tel Aviv",
+      "billingInformation": "King George 10, Tel Aviv",
+      "accountingRef": "77777",
+      "vatNumber": "123456",
+      "avatar": "https://www.hrus.co.il/wp-content/uploads/%D7%AA%D7%9E%D7%95%D7%A0%D7%AA-%D7%A4%D7%A8%D7%95%D7%A4%D7%99%D7%9C-938x580.jpg"
+    },
+    {
+      "id": 3,
+      "isMain": false,
+      "isActive": true,
+      "firstName": "David",
+      "lastName": "Katz",
+      "role": "IT Specialist",
+      "contactType": "Contractor",
+      "address": "Flat 5, Dizengoff 100, Tel Aviv",
+      "tags": ["Networking", "Support"],
+      "contactDetails": {
+        "preferredLanguage": "English",
+        "phoneNumbers": [
+          {"number": "054-9876543", "type": "Work"}
+        ],
+        "emails": [
+          {"email": "david.katz@itservices.com", "type": "Work"}
+        ],
+        "country": "Israel"
+      },
+      "billingInformation": "Dizengoff 100",
+      "mailingAddress": "Dizengoff 100",
+      "accountingRef": "99999",
+      "vatNumber": "654321",
+      "avatar": "https://example.com/avatar3.jpg"
+    },
+    {
+      "id": 4,
+      "isMain": false,
+      "isActive": true,
+      "firstName": "Noa",
+      "lastName": "Baron",
+      "role": "HR Manager",
+      "contactType": "Employee",
+      "address": "Office 3, Ramat Aviv 15, Tel Aviv",
+      "tags": ["Recruitment", "People Management"],
+      "contactDetails": {
+        "preferredLanguage": "Hebrew",
+        "phoneNumbers": [
+          {"number": "050-2223344", "type": "Work"}
+        ],
+        "emails": [
+          {"email": "noa.baron@company.com", "type": "Work"}
+        ],
+        "country": "Israel"
+      },
+      "billingInformation": "Ramat Aviv 15",
+      "mailingAddress": "Ramat Aviv 15",
+      "accountingRef": "55555",
+      "vatNumber": "112233",
+      "avatar": "https://example.com/avatar4.jpg"
+    },
+    {
+      "id": 5,
+      "isMain": false,
+      "isActive": true,
+      "firstName": "Yossi",
+      "lastName": "Halevi",
+      "role": "Marketing Director",
+      "contactType": "Employee",
+      "address": "Floor 4, Herzl 78, Tel Aviv",
+      "tags": ["Branding", "Advertising"],
+      "contactDetails": {
+        "preferredLanguage": "Hebrew",
+        "phoneNumbers": [
+          {"number": "052-8765432", "type": "Work"}
+        ],
+        "emails": [
+          {"email": "yossi.halevi@marketing.com", "type": "Work"}
+        ],
+        "country": "Israel"
+      },
+      "billingInformation": "Herzl 78",
+      "mailingAddress": "Herzl 78",
+      "accountingRef": "44444",
+      "vatNumber": "334455",
+      "avatar": "https://example.com/avatar5.jpg"
+    },
+    {
+      "id": 6,
+      "isMain": false,
+      "isActive": true,
+      "firstName": "Lior",
+      "lastName": "Shalom",
+      "role": "Finance Manager",
+      "contactType": "Employee",
+      "address": "Office 7, Ibn Gabirol 30, Tel Aviv",
+      "tags": ["Accounting", "Budgeting"],
+      "contactDetails": {
+        "preferredLanguage": "Hebrew",
+        "phoneNumbers": [
+          {"number": "053-1122334", "type": "Work"}
+        ],
+        "emails": [
+          {"email": "lior.shalom@finance.com", "type": "Work"}
+        ],
+        "country": "Israel"
+      },
+      "billingInformation": "Ibn Gabirol 30",
+      "mailingAddress": "Ibn Gabirol 30",
+      "accountingRef": "77788",
+      "vatNumber": "556677",
+      "avatar": "https://example.com/avatar10.jpg"
+    }
+  ]
+}
