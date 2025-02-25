@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Paper} from '@mui/material';
+import { Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Paper, Avatar } from '@mui/material';
 import { useSelector } from 'react-redux';
 
 import ContactRow from './ContactRow';
@@ -13,7 +13,10 @@ import "../styles/contactsTable.css"
  */
 const ContactsTable = () => {
 
-    let rows = useSelector(state => state.contact.contactsArr)
+    /**
+     * Get the contacts array from the Redux store.
+     */
+    let contactsArr = useSelector(state => state.contact.contactsArr)
 
     return (<>
 
@@ -21,7 +24,7 @@ const ContactsTable = () => {
             <Table sx={{ minWidth: 650 }} aria-label="simple table">
                 <TableHead sx={{ '& .MuiTableCell-root': { fontWeight: 'bold', textAlign: 'left' } }}>
                     <TableRow>
-                        <TableCell>profile</TableCell>
+                        <TableCell><Avatar src='' sx={{ width: 24, height: 24 }}/></TableCell>
                         <TableCell >Contact type</TableCell>
                         <TableCell>Name</TableCell>
                         <TableCell>Role</TableCell>
@@ -32,7 +35,7 @@ const ContactsTable = () => {
                     </TableRow>
                 </TableHead>
                 <TableBody>
-                    {rows.map((contact) => (
+                    {contactsArr.map((contact) => (
                         <ContactRow key={contact.id} contact={contact} />
                     ))}
                 </TableBody>

@@ -36,7 +36,7 @@ const BasePanel = () => {
         >
             <Box
                 sx={{
-                    width: 300,
+                    width: 390,
                     padding: 2,
                     display: "flex",
                     flexDirection: "column",
