@@ -10,13 +10,10 @@ import "../styles/contactsTable.css"
  * @fileoverview ContactsTable - A component for displaying a contacts table.
  * The table includes details such as contact type, name, role, and contact details.
  * Data is retrieved from Redux and passed to the ContactRow component.
+ *  
+ * @prop {Array} contactsArr - An array of contact objects to be displayed in the table.
  */
-const ContactsTable = () => {
-
-    /**
-     * Get the contacts array from the Redux store.
-     */
-    let contactsArr = useSelector(state => state.contact.contactsArr)
+const ContactsTable = ({contactsArr}) => {
 
     return (<>
 

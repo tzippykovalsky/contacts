@@ -25,7 +25,7 @@ const BasePanel = () => {
 
     return (
         <Drawer
-            open={open}
+            open={open && mode != "FILTER"}
             onClose={handleClosePanel}
             anchor="right"
             ModalProps={{

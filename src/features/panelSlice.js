@@ -7,7 +7,8 @@ import { setCurrentContact } from "./contactSlice";
 const enumMode = {
     ADD: "ADD",
     EDIT: "EDIT",
-    DISPLAY: "DISPLAY"
+    DISPLAY: "DISPLAY",
+    FILTER: "FILTER"
 }
 
 /**
@@ -51,12 +52,18 @@ const panelSlice = createSlice({
         setAddMode: (state, _action) => {
             state.mode = enumMode.ADD;
             state.open = true;
-
+        },
+        /**
+        * open panel with filter mode
+        */
+        setFilterMode: (state, _action) => {
+            state.mode = enumMode.FILTER;
+            state.open = true;
         },
     },
 
 
 })
 
-export const { setAddMode, setDisplayMode, setEditMode, closePanel } = panelSlice.actions
+export const { setAddMode, setDisplayMode, setEditMode,setFilterMode, closePanel } = panelSlice.actions
 export default panelSlice.reducer;
