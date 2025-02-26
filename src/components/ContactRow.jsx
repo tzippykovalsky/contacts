@@ -2,7 +2,7 @@ import { IconButton, Rating, TableCell, TableRow, Box,Avatar } from "@mui/materi
 import RemoveRedEyeOutlinedIcon from '@mui/icons-material/RemoveRedEyeOutlined';
 import { useDispatch } from "react-redux";
 import { setDisplayMode } from "../features/panelSlice";
-import { setCurrentContact } from "../features/contactSlice";
+import { setCurrentContact, updateContact } from "../features/contactSlice";
 import PersonOutlineOutlinedIcon from '@mui/icons-material/PersonOutlineOutlined';
 import PhoneOutlinedIcon from '@mui/icons-material/PhoneOutlined';
 import MailOutlineOutlinedIcon from '@mui/icons-material/MailOutlineOutlined';
@@ -22,6 +22,14 @@ const ContactRow = ({ contact }) => {
   function clickEyeIcon() {
     dispatch(setCurrentContact(contact));
     dispatch(setDisplayMode());
+  }
+
+  /**
+    * Updates the Redux state to set the main contact.
+    * Toggles the star rating to indicate the main contact.
+   */
+  const updateMainContact = () => {
+    dispatch(updateContact({ ...contact, isMain: !contact.isMain }));
   }
 
   return (
@@ -64,11 +72,12 @@ const ContactRow = ({ contact }) => {
       </TableCell>
 
       {/* Main Contact (Star Rating) */}
-      <TableCell align="right">
-        <Rating
+      <TableCell align="center">
+        <Rating 
           max={1}
           name="simple-controlled"
           value={contact.isMain ? 1 : 0}
+          onChange={updateMainContact}
           sx={{
             "& .MuiRating-iconFilled": { color: "#1C3959" }, // Star fill color
           }}
@@ -76,7 +85,7 @@ const ContactRow = ({ contact }) => {
       </TableCell>
 
       {/* View Contact Icon */}
-      <TableCell align="right">
+      <TableCell align="center">
         <RemoveRedEyeOutlinedIcon onClick={clickEyeIcon} />
       </TableCell>
     </TableRow>
